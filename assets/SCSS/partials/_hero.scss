@@ -5,6 +5,7 @@ $padding-mobile: 4rem 1rem;
 $padding-desktop: 6rem 2rem;
 
 .hero {
+  
   background-image: url('../img/Header/HEROimg.jpeg');
   background-size: cover;
   background-position: center;
@@ -72,6 +73,7 @@ $padding-desktop: 6rem 2rem;
 @media (min-width: 768px) {
   .hero {
     padding: $padding-desktop;
+    margin-top: 5rem;
 
     h1 {
       font-size: 2.5rem;

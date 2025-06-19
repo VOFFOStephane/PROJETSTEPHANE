@@ -51,6 +51,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  .shop{
+    margin-top: 6rem;
+  }
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
   }

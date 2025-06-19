@@ -38,6 +38,11 @@
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
+    .services, .contact {
+    margin-top: 6rem;
+    
+    }
+
     h2,p{
       margin-left: 10rem;
       margin-right: 10rem;

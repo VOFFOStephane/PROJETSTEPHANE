@@ -11,6 +11,7 @@ body {
     padding: 2rem;
 }
 
+
 .about, .team, .testimonials {
     padding: 40px;
 }
@@ -69,10 +70,17 @@ body {
     }
     
 }
+@media  screen and (min-width: 769px) {
+    .about {
+        margin-top: 5rem;
+    }
+}
+    
+
 
 /* 🖥️ Desktop: Ajuste la largeur pour un affichage optimal */
 @media screen and (min-width: 1024px) {
-    .about, .team, .testimonials {
+     .team, .testimonials {
         max-width: 1200px;
         margin: auto;
     }
