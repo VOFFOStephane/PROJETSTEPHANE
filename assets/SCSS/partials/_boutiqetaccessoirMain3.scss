@@ -1,6 +1,11 @@
 .shop {
   padding: 1rem;
-  color: #1a1a1a;
+  color: $black;
+  h2{
+    font-size: 1.8rem;
+    
+    
+  }
 
   .product-grid {
     display: grid;
@@ -11,10 +16,10 @@
   }
 
   .product-card {
-    background-color: #1a1a1a;
+    background-color: $black;
     border-radius: 8px;
     padding: 1rem;
-    color: #fff;
+    color: $white;
     text-align: center;
 
     img {
@@ -25,7 +30,7 @@
     }
 
     .price {
-      color: #00f6ff;
+      color: $price-color;
       font-weight: bold;
     }
   }
@@ -37,21 +42,24 @@
     gap: 0.5rem;
 
     a {
-      background: #2e2e2e;
+      background: $form-pagination-bg;
       padding: 0.5rem 0.75rem;
-      color: #fff;
+      color: $white;
       text-decoration: none;
       border-radius: 4px;
 
       &.active {
-        background: #e50914;
+        background: $btn-pagination-bg;
       }
     }
   }
 
   @media screen and (min-width: 768px) {
-    margin-top: 5rem;
-
+    margin-top: 8rem;
+    h2{
+      margin-left: 1rem;
+      text-align: start;
+    }
     .product-grid {
       grid-template-columns: repeat(2, 1fr);
     }

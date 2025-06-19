@@ -1,6 +1,6 @@
 .footer {
-  background-color: #0d0d0d;
-  color: #f0f0f0;
+  background-color: $footer-bg;
+  color: $footer-color;
   padding: 2rem 1rem;
   font-size: 0.9rem;
 
@@ -14,7 +14,7 @@
       h3,
       h4 {
         margin-bottom: 0.5rem;
-        color: #e50914;
+        color: $btn-pagination-bg;
       }
 
       ul {
@@ -23,11 +23,11 @@
       }
 
       a {
-        color: #f0f0f0;
+        color: $footer-color;
         text-decoration: none;
 
         &:hover {
-          color: #e9e774ed;
+          color: $link-hover;
         }
       }
     }
@@ -35,7 +35,7 @@
 
   .footer-bottom {
     text-align: center;
-    border-top: 1px solid #2e2e2e;
+    border-top: 1px solid $form-pagination-bg;
     padding-top: 1rem;
     font-size: 0.8rem;
   }

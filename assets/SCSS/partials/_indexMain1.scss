@@ -1,5 +1,5 @@
 body {
-  background-color: #f9f9f9;
+  background-color: $white;
 }
 
 .products-latest,
@@ -13,7 +13,7 @@ section {
     margin: 1.5rem 0 0.5rem;
     padding-left: 1rem;
     text-align: center;
-    color: #e50914;
+    color: $black;
   }
 }
 
@@ -26,10 +26,10 @@ section {
 }
 
 .product-card {
-  background-color: #1a1a1a;
+  background-color: $black;
   border-radius: 8px;
   padding: 1rem;
-  color: #fff;
+  color: $white;
   text-align: center;
 
   img {
@@ -40,16 +40,19 @@ section {
   }
 
   .price {
-    color: #00f6ff;
+    color: $price-color;
     font-weight: bold;
   }
 }
 
 .newsletter {
-  background: #111;
+  background: $primary;
   padding: 2rem 1rem;
   text-align: center;
-  color: #fff;
+  color: $white;
+  h2{
+    color: $btn-pagination-bg;
+  }
 
   form {
     display: flex;
@@ -65,20 +68,20 @@ section {
     }
 
     input {
-      background-color: #2e2e2e;
-      color: #fff;
+      background-color: $form-pagination-bg;
+      color: $white;
     }
 
     button {
-      background-color: #e50914;
-      color: #fff;
+      background-color: $btn-pagination-bg;
+      color: $white;
       font-weight: bold;
       cursor: pointer;
 
       &:hover {
-        background-color: #fff;
-        color: #e50914;
-        border: 0.5px solid #e50914;
+        background-color: $white;
+        color: $btn-pagination-bg;
+        border: 0.5px solid $btn-pagination-bg;
       }
     }
   }
@@ -95,6 +98,7 @@ section {
       text-align: start;
     }
   }
+ 
 }
 
 @media screen and (min-width: 1024px) {
