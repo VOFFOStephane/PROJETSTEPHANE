@@ -1,23 +1,25 @@
-body{
+body {
   background-color: #f9f9f9;
 }
-.products-latest,.products-top{
-  margin-left: 12px;
-  margin-top: 12px;
-  margin-right: 12px;
 
+.products-latest,
+.products-top {
+  margin: 12px 12px 0;
 }
-section h2 {
-  font-size: 1.8rem;
-  margin: 1.5rem 0 0.5rem;
-  padding-left: 1rem;
-  text-align: center;
-  color: #e50914;
+
+section {
+  h2 {
+    font-size: 1.8rem;
+    margin: 1.5rem 0 0.5rem;
+    padding-left: 1rem;
+    text-align: center;
+    color: #e50914;
+  }
 }
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(150px, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); // ← Peut-être une erreur ici ? voir note ci-dessous
   gap: 1rem;
   padding: 1rem;
   max-width: 100%;
@@ -29,19 +31,18 @@ section h2 {
   padding: 1rem;
   color: #fff;
   text-align: center;
-  
-}
 
-.product-card img {
-  max-width: 250px;
-  height: auto;
-  border-radius: 5px;
-  margin-bottom: 0.5rem;
-}
+  img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+  }
 
-.product-card .price {
-  color: #00f6ff;
-  font-weight: bold;
+  .price {
+    color: #00f6ff;
+    font-weight: bold;
+  }
 }
 
 .newsletter {
@@ -49,57 +50,61 @@ section h2 {
   padding: 2rem 1rem;
   text-align: center;
   color: #fff;
-}
 
-.newsletter form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1rem;
-}
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
 
-.newsletter input,
-.newsletter button {
-  padding: 0.75rem;
-  border: none;
-  border-radius: 5px;
-}
+    input,
+    button {
+      padding: 0.75rem;
+      border: none;
+      border-radius: 5px;
+    }
 
-.newsletter input {
-  background-color: #2e2e2e;
-  color: #fff;
-}
+    input {
+      background-color: #2e2e2e;
+      color: #fff;
+    }
 
-.newsletter button {  
-   background-color: #e50914;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  &:hover{
-    background-color: #fff;
-    color: #e50914;
-    border: 0.5px solid #e50914;
+    button {
+      background-color: #e50914;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #fff;
+        color: #e50914;
+        border: 0.5px solid #e50914;
+      }
+    }
   }
 }
 
-/* Tablet et plus */
+// Breakpoints
 @media screen and (min-width: 768px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  section h2 {
-    text-align:start;
+
+  section {
+    h2 {
+      text-align: start;
+    }
   }
 }
+
 @media screen and (min-width: 1024px) {
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  
 }
+
 @media screen and (min-width: 1250px) {
   .product-grid {
     grid-template-columns: repeat(4, 1fr);
   }
-  
 }

@@ -1,87 +1,96 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .header {
-    background: #111;
-    color: #fff;
-    padding: 2rem;
+  background: #111;
+  color: #fff;
+  padding: 2rem;
 }
 
-
-.about, .team, .testimonials {
-    padding: 40px;
+.about,
+.team,
+.testimonials {
+  padding: 40px;
 }
 
- .about img {
+.about {
+  img {
     max-width: 100%;
     border-radius: 8px;
-}
-.team-member img{
-    max-width: 100%;
-    border-radius: 30%;
+  }
 }
 
-.team-container {
+.team {
+  &-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-}
+  }
 
-.team-member {
+  &-member {
     background: #f4f4f4;
     padding: 15px;
     width: 250px;
     text-align: center;
     border-radius: 8px;
+
+    img {
+      max-width: 100%;
+      border-radius: 30%;
+    }
+  }
 }
 
 .testimonial {
-    background: #ddd;
-    padding: 20px;
-    margin: 10px auto;
-    width: 50%;
-    border-radius: 8px;
+  background: #ddd;
+  padding: 20px;
+  margin: 10px auto;
+  width: 50%;
+  border-radius: 8px;
 }
 
-/* 📱 Mobile: Empile tout en colonne */
+// 📱 Mobile
 @media screen and (max-width: 576px) {
-    .team-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .testimonial {
-        width: 80%;
-    }
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial {
+    width: 80%;
+  }
 }
 
-/* 📲 Tablette: Réduit légèrement les espacements */
+// 📲 Tablette
 @media screen and (max-width: 768px) {
-    .team-container {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .testimonial {
-        width: 70%;
-    }
-    
-}
-@media  screen and (min-width: 769px) {
-    .about {
-        margin-top: 5rem;
-    }
-}
-    
+  .team-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
+  .testimonial {
+    width: 70%;
+  }
+}
 
-/* 🖥️ Desktop: Ajuste la largeur pour un affichage optimal */
+// 🌤️ Tablette +
+@media screen and (min-width: 769px) {
+  .about {
+    margin-top: 5rem;
+  }
+}
+
+// 🖥️ Desktop
 @media screen and (min-width: 1024px) {
-     .team, .testimonials {
-        max-width: 1200px;
-        margin: auto;
-    }
+  .team,
+  .testimonials {
+    max-width: 1200px;
+    margin: auto;
+  }
 }
+

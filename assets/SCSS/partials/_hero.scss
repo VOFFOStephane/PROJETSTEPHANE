@@ -5,7 +5,6 @@ $padding-mobile: 4rem 1rem;
 $padding-desktop: 6rem 2rem;
 
 .hero {
-  
   background-image: url('../img/Header/HEROimg.jpeg');
   background-size: cover;
   background-position: center;
@@ -18,7 +17,7 @@ $padding-desktop: 6rem 2rem;
     content: "";
     position: absolute;
     inset: 0;
-    background: $overlay-color; /* Assombrit l'image */
+    background: $overlay-color;
     z-index: 0;
   }
 
@@ -42,36 +41,8 @@ $padding-desktop: 6rem 2rem;
     flex-direction: column;
     gap: 1rem;
   }
-}
 
-.btn {
-  text-decoration: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  font-weight: bold;
-  border: 1px ;
-}
-.btn-primary {
-    background-color: $primary-color;
-    color: $text-color;
-    &:hover{
-      background-color: $text-color;
-      color: $primary-color;
-    }
-}
-.btn-secondary {
-    background-color: transparent;
-    color: $text-color;
-    border: 2px solid $text-color;
-    &:hover{
-      background-color: $text-color;
-      color: black;
-    }
-}
-
-/* Responsive tablette et plus */
-@media (min-width: 768px) {
-  .hero {
+  @media (min-width: 768px) {
     padding: $padding-desktop;
     margin-top: 5rem;
 
@@ -91,3 +62,33 @@ $padding-desktop: 6rem 2rem;
     }
   }
 }
+
+.btn {
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 1px solid transparent;
+
+  &-primary {
+    background-color: $primary-color;
+    color: $text-color;
+
+    &:hover {
+      background-color: $text-color;
+      color: $primary-color;
+    }
+  }
+
+  &-secondary {
+    background-color: transparent;
+    color: $text-color;
+    border: 2px solid $text-color;
+
+    &:hover {
+      background-color: $text-color;
+      color: black;
+    }
+  }
+}
+
