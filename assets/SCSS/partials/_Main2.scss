@@ -15,9 +15,13 @@ body {
     padding: 40px;
 }
 
-.about img, .team-member img {
+ .about img {
     max-width: 100%;
     border-radius: 8px;
+}
+.team-member img{
+    max-width: 100%;
+    border-radius: 30%;
 }
 
 .team-container {
