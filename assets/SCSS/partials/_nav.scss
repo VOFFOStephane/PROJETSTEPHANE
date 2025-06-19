@@ -1,0 +1,152 @@
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  background-color: #111;
+  color: #fff;
+  padding: 1rem;
+  height: 70px;
+  width: auto;
+  
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-left,
+    .nav-center,
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+    
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .cart-icon {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-left: 1rem;
+      display: none; // visible uniquement sur tablette+
+    }
+
+    .burger {
+      cursor: pointer;
+      font-size: 1.5rem;
+      display: block;
+
+      .close-icon {
+        display: none;
+      }
+
+      &.active {
+        .open-icon {
+          display: none;
+        }
+        .close-icon {
+          display: inline;
+        }
+      }
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        margin: 0.5rem 0;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+
+        .dropdown-menu {
+          display: none;
+          list-style: none;
+          padding-left: 1rem;
+          z-index: 10;
+          position: relative;
+        }
+
+        &:hover .dropdown-menu {
+          display: block;
+        }
+      }
+
+      &.active {
+        display: flex;
+         position: absolute; /* Évite qu'elle soit cachée */
+          top: 70px; /* Ajuste selon la hauteur de la navbar */
+          left: 0;
+          background: #111;
+          width: 50%;
+          z-index: 999;
+      }
+    }
+  }
+}
+
+// Tablet & Desktop
+@media screen and (min-width: 768px) {
+  .navbar {
+  position: relative;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+    .nav-container {
+      .nav-left {
+        flex: 1;
+        justify-content: flex-start;
+      }
+      .nav-right{
+      justify-content: flex-start;
+    }
+      .nav-center {
+        flex: 2;
+        justify-content: center;
+
+        .nav-links {
+          display: flex;
+          flex-direction: row;
+          gap: 1.5rem;
+
+          .dropdown {
+            position: relative;
+
+            .dropdown-menu {
+              position: absolute;
+              background: #222;
+              padding: 0.5rem;
+              top: 100%;
+              left: 0;
+              box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+              min-width: 150px;
+            }
+          }
+        }
+      }
+
+      .nav-right {
+        flex: 1;
+        justify-content: flex-end;
+
+        .cart-icon {
+          display: inline;
+        }
+
+        .burger {
+          display: none;
+        }
+      }
+    }
+  }
+}
