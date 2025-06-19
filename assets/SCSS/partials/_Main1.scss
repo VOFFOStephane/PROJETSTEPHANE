@@ -19,7 +19,7 @@ section {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); // ← Peut-être une erreur ici ? voir note ci-dessous
+  grid-template-columns: repeat(150px, 1fr);
   gap: 1rem;
   padding: 1rem;
   max-width: 100%;
